@@ -36,25 +36,25 @@ const TareaState = props => {
 
     const obtenerTareas = async proyecto => {
 
-        var array_tareas = [];
+        // var array_tareas = [];
 
         try {
 
             const resultado = await clienteAxios.get(`/api/tareas`, { params: { proyecto } });
 
-            if (resultado) {
+            // if (resultado) {
 
-                resultado.data.tareas.map(e => {
+            //     resultado.data.tareas.map(e => {
 
-                    if (e != undefined) {
-                        array_tareas.push(e);
-                    }
-                })
-            }
+            //         if (e != undefined) {
+            //             array_tareas.push(e);
+            //         }
+            //     })
+            // }
 
             dispatch({
                 type: TAREAS_PROYECTO,
-                payload: array_tareas
+                payload: resultado.data.tareas
             })
         } catch (error) {
 

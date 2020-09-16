@@ -16,7 +16,7 @@ export default (state,action)=>{
         case AGREGAR_TAREA:
             return{
                 ...state,
-                tareasproyecto:[,action.payload,...state.tareasproyecto],
+                tareasproyecto:[action.payload,...state.tareasproyecto],
                 errortarea:false
             }
         case ELIMINAR_TAREA:

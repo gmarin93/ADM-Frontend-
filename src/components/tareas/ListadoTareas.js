@@ -33,7 +33,7 @@ const ListadoTareas = () => {
                         {
                             tareasproyecto.map(tarea => {
 
-                                if (tarea) {
+                                // if (tarea) {
                                     return (
                                         <CSSTransition
                                             key={`${tarea._id}`}
@@ -44,7 +44,8 @@ const ListadoTareas = () => {
                                                 tarea={tarea} />
                                         </CSSTransition>
                                     )
-                                }
+                                // }
+
                             })
                         }
                     </TransitionGroup>

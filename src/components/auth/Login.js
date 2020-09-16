@@ -17,12 +17,12 @@ const Login = props => {
         if(autenticado){
             props.history.push('/proyectos');
         }
-
+        
         if(mensaje){
             mostrarAlerta(mensaje.msg, mensaje.categoria);
         }
+        
         //eslint-disable-next-line
-
     },[mensaje, autenticado, props.history])
 
     const [usuario, guardarUsuario] = useState({

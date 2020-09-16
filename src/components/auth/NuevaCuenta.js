@@ -22,8 +22,8 @@ const NuevaCuenta = props => {
             mostrarAlerta(mensaje.msg, mensaje.categoria);
         }
 
+        
         //eslint-disable-next-line
-
     },[mensaje, autenticado, props.history])
 
     const [usuario, guardarUsuario] = useState({
@@ -60,7 +60,7 @@ const NuevaCuenta = props => {
             return;
         }
 
-        if(password != confirmar){
+        if(password !== confirmar){
             mostrarAlerta('Las contrañas no son iguales','alerta-error');
             return;
         }
